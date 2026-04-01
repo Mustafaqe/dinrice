@@ -1,0 +1,194 @@
+@import url("/home/mustafa/.cache/wal/colors-waybar.css");
+@import url("crt.css");
+
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 9pt;
+  font-weight: bold;
+  border-radius: 0px;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+@keyframes blink_red {
+  to {
+    background-color: @color1;
+    color: @background;
+  }
+}
+
+.warning,
+.critical,
+.urgent {
+  animation-name: blink_red;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+window#waybar {
+  background-color: transparent;
+}
+
+window>box {
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: 2px;
+  background-color: @background;
+}
+
+#workspaces {
+  padding-left: 0px;
+  padding-right: 4px;
+}
+
+#workspaces button {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+  color: @foreground;
+}
+
+#workspaces button.focused {
+  background-color: @color4;
+  color: @background;
+}
+
+#workspaces button.urgent {
+  color: @background;
+  background-color: @color1;
+}
+
+#workspaces button:hover {
+  background-color: @color3;
+  color: @background;
+}
+
+tooltip {
+  background: @background;
+}
+
+tooltip label {
+  color: @foreground;
+}
+
+#custom-launcher {
+  padding-left: 8px;
+  padding-right: 6px;
+  color: @color5;
+}
+
+#mode,
+#clock,
+#memory,
+#temperature,
+#cpu,
+#mpd,
+#idle_inhibitor,
+#temperature,
+#backlight,
+#pulseaudio,
+#network,
+#battery,
+#custom-powermenu,
+#custom-pomodoro,
+#custom-cava-internal {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#memory {
+  color: @color4;
+}
+
+#cpu {
+  color: @color5;
+}
+
+#clock {
+  color: @foreground;
+}
+
+#idle_inhibitor {
+  color: @color3;
+}
+
+#temperature {
+  color: @color2;
+}
+
+#backlight {
+  color: @color4;
+}
+
+#pulseaudio {
+  color: @color6;
+}
+
+#network {
+  color: @color2;
+}
+
+#network.disconnected {
+  color: @color7;
+}
+
+#battery.charging,
+#battery.full,
+#battery.discharging {
+  color: @color3;
+}
+
+#battery.critical:not(.charging) {
+  color: @color1;
+}
+
+#custom-powermenu {
+  color: @color1;
+}
+
+#tray {
+  padding-right: 8px;
+  padding-left: 10px;
+}
+
+#mpd.paused {
+  color: @color8;
+  font-style: italic;
+}
+
+#mpd.stopped {
+  background: transparent;
+}
+
+#mpd {
+  color: @foreground;
+}
+
+#custom-cava-internal {
+  font-family: "Hack Nerd Font";
+  color: @color4;
+}
+
+#custom-pomodoro {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#custom-pomodoro.work {
+  color: @color1;
+}
+
+#custom-pomodoro.break {
+  color: @color2;
+}
+
+#custom-pomodoro.paused {
+  color: @color3;
+}
+
+#custom-pomodoro.stopped {
+  color: @foreground;
+}

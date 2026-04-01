@@ -1,0 +1,40 @@
+/**
+ * Wallpaper selector theme for rofi
+ **/
+
+@import "launcher_theme.rasi"
+
+window {
+    width: 65%;
+    location: center;
+    anchor: center;
+}
+
+listview {
+    columns: 4;
+    lines: 3;
+    spacing: 20px;
+    padding: 20px;
+    scrollbar: false;
+}
+
+element {
+    orientation: vertical;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+element-icon {
+    size: 180px;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    border: 0px;
+}
+
+element-text {
+    expand: true;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    margin: 10px 0px 0px 0px;
+    font: "JetBrains Mono NF 11";
+}
