@@ -4,7 +4,7 @@ A beautiful, dynamic Sway window manager configuration integrating Pywal, Waybar
 
 > **Special Thanks:** I was heavily inspired by the [Ruixi-rebirth/sway-dotfiles](https://github.com/Ruixi-rebirth/sway-dotfiles.git) repository. Thank you for the inspiration!
 
-## 📦 Installation
+##  Installation
 
 To install this rice safely without destroying your current setup:
 
@@ -24,7 +24,7 @@ To install this rice safely without destroying your current setup:
 3. **Reload Sway:**
    Press `Mod + Shift + c`. Waybar and Rofi will automatically boot up with the new configurations.
 
-## 🎨 How to Add Your Own Wallpapers & Trigger Textures
+##  How to Add Your Own Wallpapers & Trigger Textures
 
 Adding your own wallpaper is incredibly simple. This rice contains a custom dynamic engine built into `set_wallpaper.sh` that automatically themes Waybar and Rofi based on **keywords in your wallpaper filename**!
 
