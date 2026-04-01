@@ -1,7 +1,7 @@
 #!/bin/sh
 FILE=$(date "+%Y-%m-%d"T"%H:%M:%S").png
 # Get the picture from maim
-grimshot --notify  save area ~/Pictures/src.png
+sh -c 'slurp | grim -g - ~/Pictures/src.png && notify-send "Screenshot" "Area screenshot taken"'
 # add shadow, round corner, border and watermark
 convert $HOME/Pictures/src.png \
 	\( +clone -alpha extract \

@@ -253,8 +253,8 @@ smart_borders on
     bindsym $mod+Shift+x exec --no-startup-id        ~/.config/sway/swaylock.sh
     bindsym $mod+t exec --no-startup-id              telegram-desktop
     bindsym $mod+q exec --no-startup-id              icalingua --enable-features=UseOzonePlatform --ozone-platform=wayland
-    bindsym $mod+bracketleft  exec --no-startup-id   grimshot --notify  save area ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
-    bindsym $mod+bracketright exec --no-startup-id   grimshot --notify  copy area 
+    bindsym $mod+bracketleft  exec --no-startup-id   sh -c 'slurp | grim -g - ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png && notify-send "Screenshot" "Area screenshot saved"'
+    bindsym $mod+bracketright exec --no-startup-id   sh -c 'slurp | grim -g - - | wl-copy && notify-send "Screenshot" "Copied to clipboard"'
     bindsym $mod+a exec --no-startup-id             ~/.config/sway/grimshot_watermark.sh
 
 
@@ -410,3 +410,8 @@ bindsym Shift+Ctrl+Left          resize shrink width  5 px or 5 ppt
 bindsym Shift+Ctrl+Up            resize grow   height 5 px or 5 ppt
 bindsym Shift+Ctrl+Down          resize shrink height 5 px or 5 ppt
 bindsym Shift+Ctrl+Right         resize grow   width  5 px or 5 ppt
+
+# PrintScreen Binds inserted dynamically
+bindsym Print exec sh -c 'grim ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S_Screenshot").png && notify-send "Screenshot" "Screenshot saved"'
+bindsym Shift+Print exec sh -c 'slurp | grim -g - ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S_Screenshot").png && notify-send "Screenshot" "Area screenshot saved"'
+
