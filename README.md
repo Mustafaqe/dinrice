@@ -2,6 +2,13 @@
 
 A beautiful, dynamic Sway window manager configuration integrating Pywal, Waybar, and Rofi with dynamic textures (CRT scanlines, glass blur) depending on your wallpaper selection in real-time!
 
+## Themes in Action
+
+![Theme 1](pic1.png)
+![Theme 2](pic2.png)
+![Theme 3](pic3.png)
+![Theme 4](pic4.png)
+
 > **Special Thanks:** I was heavily inspired by the [Ruixi-rebirth/sway-dotfiles](https://github.com/Ruixi-rebirth/sway-dotfiles.git) repository. Thank you for the inspiration!
 
 ##  Installation
@@ -40,12 +47,6 @@ Adding your own wallpaper is incredibly simple. This rice contains a custom dyna
 3. **Change the Wallpaper:**
    Press your bound shortcut (likely `Alt + Space` or through your Rofi menu) to open the Wallpaper selector and pick your new image. All system colors and menu textures will shift simultaneously!
 
-## Themes in Action
-
-![Theme 1](pic1.png)
-![Theme 2](pic2.png)
-![Theme 3](pic3.png)
-![Theme 4](pic4.png)
 
 ## Dependencies
 
