@@ -26,8 +26,8 @@ bindsym $mod+comma workspace prev
 #-----------------------------#
 output * adaptive_sync on
   
-exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
-exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK DBUS_SESSION_BUS_ADDRESS
+exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP DBUS_SESSION_BUS_ADDRESS
 
 default_border pixel 2
 default_floating_border pixel 2
@@ -105,8 +105,8 @@ smart_borders on
     for_window [app_id="telegram"] focus
     for_window [class="netease-cloud-music"] move --no-auto-back-and-forth container to workspace 网易云
     for_window [class="netease-cloud-music"] focus
-    for_window [app_id="musicfox"] move --no-auto-back-and-forth container to workspace Musicfox
-    for_window [app_id="musicfox"] focus
+    for_window [app_id="youtube-music"] move --no-auto-back-and-forth container to workspace Youtube
+    for_window [app_id="youtube-music"] focus
 
 #---------------------#
 # Focus follows mouse #
@@ -242,16 +242,17 @@ smart_borders on
     # Start a terminal
     bindsym $mod+Return exec $term
     bindsym $mod+Shift+Return exec kitty --class="termfloat"
-    bindsym $mod+Shift+m exec kitty --class="musicfox" --hold sh -c "musicfox"
-    bindsym $mod+Shift+d exec kitty --class="danmufloat" --hold sh -c "cd $HOME/Codelearning/go/src/bilibili_live_tui/  && export TERM=xterm-256color && ./main" 
+    bindsym $mod+Shift+m exec youtube-music-for-desktop
+    bindsym $mod+Shift+d exec kitty --class="danmufloat" --hold sh -c "cd /home/mustafa/Codelearning/go/src/bilibili_live_tui/  && export TERM=xterm-256color && ./main" 
 
 
     # quick start some applications
     bindsym $mod+m exec --no-startup-id              netease-cloud-music
     bindsym $mod+b exec --no-startup-id MOZ_ENABLE_WAYLAND=1 firefox
-    #bindsym $mod+Shift+d exec --no-startup-id        kitty --hold sh -c "cd $HOME/Codelearning/go/src/bilibili_live_tui/  && export TERM=xterm-256color && ./main"
+    #bindsym $mod+Shift+d exec --no-startup-id        kitty --hold sh -c "cd /home/mustafa/Codelearning/go/src/bilibili_live_tui/  && export TERM=xterm-256color && ./main"
     bindsym $mod+Shift+x exec --no-startup-id        ~/.config/sway/swaylock.sh
     bindsym $mod+t exec --no-startup-id              telegram-desktop
+    bindsym ctrl+shift+t exec --no-startup-id        telegram-desktop
     bindsym $mod+q exec --no-startup-id              icalingua --enable-features=UseOzonePlatform --ozone-platform=wayland
     bindsym $mod+bracketleft  exec --no-startup-id   sh -c 'slurp | grim -g - ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png && notify-send "Screenshot" "Area screenshot saved"'
     bindsym $mod+bracketright exec --no-startup-id   sh -c 'slurp | grim -g - - | wl-copy && notify-send "Screenshot" "Copied to clipboard"'

@@ -150,8 +150,8 @@ tooltip label {
 }
 
 #tray {
-  padding-right: 8px;
-  padding-left: 10px;
+  padding-right: 4px;
+  padding-left: 4px;
 }
 
 #mpd.paused {

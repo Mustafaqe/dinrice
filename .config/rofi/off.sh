@@ -26,7 +26,7 @@ icons[shutdown]="\uf011"
 icons[cancel]="\u00d7"
 
 declare -A actions
-actions[lockscreen]="sh $HOME/.config/sway/swaylock.sh"
+actions[lockscreen]="sh /home/mustafa/.config/sway/swaylock.sh"
 actions[logout]="loginctl terminate-session ${XDG_SESSION_ID-}"
 actions[suspend]="systemctl suspend"
 actions[hibernate]="systemctl hibernate"

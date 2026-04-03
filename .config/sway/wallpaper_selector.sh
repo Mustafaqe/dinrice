@@ -2,7 +2,7 @@
 
 # Directory where wallpapers are stored
 WALLPAPER_DIR="/home/mustafa/.config/sway/wallpaper"
-ROFI_THEME="$HOME/.config/rofi/wallpaper_theme.rasi"
+ROFI_THEME="/home/mustafa/.config/rofi/wallpaper_theme.rasi"
 
 # Find all supported image files (exclude directory names)
 wallpapers=$(find -L "$WALLPAPER_DIR" -maxdepth 1 -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.webp" \))
@@ -33,8 +33,8 @@ fi
 
 if [ "$selected_name" == "Randomize Choice" ]; then
     # Pick a random wallpaper
-    if [ -f "$HOME/.config/sway/set_wallpaper.sh" ]; then
-        "$HOME/.config/sway/set_wallpaper.sh" "random"
+    if [ -f "/home/mustafa/.config/sway/set_wallpaper.sh" ]; then
+        "/home/mustafa/.config/sway/set_wallpaper.sh" "random"
     fi
 else
     # Find the full path of the selected wallpaper by matching the filename exactly
@@ -42,7 +42,7 @@ else
     selected_path=$(echo "$wallpapers" | while read -r p; do if [[ $(basename "$p") == "$selected_name" ]]; then echo "$p"; break; fi; done)
     
     # Apply the selection
-    if [ -n "$selected_path" ] && [ -f "$HOME/.config/sway/set_wallpaper.sh" ]; then
-        "$HOME/.config/sway/set_wallpaper.sh" "$selected_path"
+    if [ -n "$selected_path" ] && [ -f "/home/mustafa/.config/sway/set_wallpaper.sh" ]; then
+        "/home/mustafa/.config/sway/set_wallpaper.sh" "$selected_path"
     fi
 fi

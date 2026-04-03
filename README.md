@@ -11,21 +11,19 @@ A beautiful, dynamic Sway window manager configuration integrating Pywal, Waybar
 
 > **Special Thanks:** I was heavily inspired by the [Ruixi-rebirth/sway-dotfiles](https://github.com/Ruixi-rebirth/sway-dotfiles.git) repository. Thank you for the inspiration!
 
-##  Installation
-
-To install this rice safely without destroying your current setup:
-
-1. **Backup your existing configurations:**
+1. **Backup your existing configurations (optional, the script will do it too):**
    ```bash
    mv ~/.config/sway ~/.config/sway_bak
    mv ~/.config/waybar ~/.config/waybar_bak
    mv ~/.config/rofi ~/.config/rofi_bak
    ```
 
-2. **Clone the repository and copy the configurations:**
+2. **Clone and Run Installer:**
    ```bash
-   git clone https://github.com/Mustafaqe/dinrice.git /tmp/dinrice
-   cp -r /tmp/dinrice/.config/* ~/.config/
+   git clone https://github.com/Mustafaqe/dinrice.git ~/dinrice
+   cd ~/dinrice
+   chmod +x install.sh
+   ./install.sh
    ```
 
 3. **Reload Sway:**

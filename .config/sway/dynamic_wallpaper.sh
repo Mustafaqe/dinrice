@@ -11,8 +11,8 @@ fi
 # A loop to rotate the wallpaper every 10 minutes
 while true; do
     # Run the wallpaper setter
-    if [ -f "$HOME/.config/sway/set_wallpaper.sh" ]; then
-        "$HOME/.config/sway/set_wallpaper.sh"
+    if [ -f "/home/mustafa/.config/sway/set_wallpaper.sh" ]; then
+        "/home/mustafa/.config/sway/set_wallpaper.sh"
     fi
     
     # Wait for 10 minutes before next change

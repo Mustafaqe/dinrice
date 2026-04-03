@@ -1,4 +1,8 @@
 {
+  "layer": "top",
+  "position": "top",
+  "height": 34,
+  "spacing": 4,
   "modules-left": [
     "custom/launcher",
     "custom/pomodoro",
@@ -12,14 +16,14 @@
     "clock"
   ],
   "modules-right": [
+    "tray",
     "pulseaudio",
     "backlight",
     "memory",
     "cpu",
     "network",
     "battery",
-    "custom/powermenu",
-    "tray"
+    "custom/powermenu"
   ],
   "custom/pomodoro": {
     "format": "{}",
@@ -38,11 +42,10 @@
   },
   "custom/cava-internal": {
     "exec": "~/.config/waybar/Cava.sh",
-    //"exec": "~/.config/waybar/cava-internal.sh",
     "tooltip": false
   },
   "sway/workspaces": {
-    "disable-scroll": true,
+    "disable-scroll": true
   },
   "idle_inhibitor": {
     "format": "{icon}",
@@ -75,9 +78,8 @@
         ""
       ]
     },
-    "scroll-step": 1,
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "tooltip": false,
+    "tooltip": false
   },
   "battery": {
     "interval": 10,
@@ -108,15 +110,14 @@
     "interval": 1,
     "format": "{:%I:%M %p  %A %b %d}",
     "tooltip": true,
-    /* "tooltip-format": "{:%A, %d %B %Y}\n<tt>{calendar}</tt>" */
-    "tooltip-format": "上午：高数\n下午：Ps\n晚上：Golang\n<tt>{calendar}</tt>",
+    "tooltip-format": "上午：高数\n下午：Ps\n晚上：Golang\n<tt>{calendar}</tt>"
   },
   "memory": {
     "interval": 1,
     "format": "﬙ {percentage}%",
     "states": {
-      "warning": 85,
-    },
+      "warning": 85
+    }
   },
   "cpu": {
     "interval": 1,
@@ -146,7 +147,6 @@
   },
   "temperature": {
     "hwmon-path": "/sys/class/hwmon/hwmon4/temp2_input",
-    //"critical-threshold": 80,
     "tooltip": false,
     "format": " {temperatureC}°C"
   },
@@ -156,7 +156,8 @@
     "tooltip": false
   },
   "tray": {
-    "icon-size": 13,
-    "spacing": 5
-  },
+    "icon-size": 16,
+    "spacing": 4,
+    "show-passive-icons": true
+  }
 }
